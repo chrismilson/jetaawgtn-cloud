@@ -16,4 +16,18 @@ The infrastructure for the site is all contained within a single AWS account:
 
 This account has traditionally been managed by the JETAA member who has also been paying for the account at any given time.
 
-This repository contains the terraform code to maintain the cloud resources.
+### Terraform
+
+This repository contains the terraform code to maintain the cloud resources. Since there are limited resources with little chance of scaling, all of the resources are managed in the same terraform config and tracked by a single terraform state file.
+
+### Maintaining the Terraform
+
+The terraform code will likely not need to be updated - its sole purpose is to track what resources exist so that future maintainers of the cloud resources are aware of exactly what exists in the AWS account. 
+
+If changes are to be made to the cloud resources, the maintainer should endeavour to make those changes to the terraform code only. Making manual changes via the console will make it difficult for future maintainers to understand what exists and what has existed in the past. Making changes to this terraform code, committing those changes to this repository, and updating the cloud infrastructure by applying thos terraform should be ther preferred option.
+
+If you are reading this as the new maintainer of the infrastructure, never fear! Terraform is a simple language to read and there are many resources online to help in understanding it! You can do it!!
+
+### Installing required software
+
+- `terraform` (see [the code](./terraform/tf_config.tf) to see what version of terraform you will need to install) 
