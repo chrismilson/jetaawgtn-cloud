@@ -1,3 +1,5 @@
+*I published this under the impression that I would need to handover the website and infrastructure to someone else. Ultimately the decision was that JETAA Wellington does not need such a site in favour of social networking.*
+
 # JETAA Wellington Cloud
 
 JETAA Wellington used to have a Wordpress site that was hosted by a private hosting company. This company charged JETAA Wellington approximately $200 per year for hosting which included some user and email functionality, however this was not required by JETAA Wellington.
